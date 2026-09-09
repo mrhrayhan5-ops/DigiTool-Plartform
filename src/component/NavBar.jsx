@@ -30,9 +30,9 @@ const NavBar = () => {
                 </ul>
             </div>
             <div className="navbar-end flex gap-4">
-                <button>Cart</button>
+                <button><img src="/shopping-cart.png" alt="" /></button>
                 <button className="font-semibold">Login</button>
-                <button className="btn rounded-full text-white font-semibold bg-linear-to-r from-[#4F39F6] to-[#9514FA]">Get Started</button>
+                <button className="btn BTN rounded-full">Get Started</button>
             </div>
         </div>
     );
