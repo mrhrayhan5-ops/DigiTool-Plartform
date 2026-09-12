@@ -18,7 +18,7 @@ const NavBar = () => {
                         <li><a>FAQ</a></li>
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-3xl font-bold bg-linear-to-r from-[#4F39F6] to-[#9514FA] bg-clip-text text-transparent">DigiTools</a>
+                <a className="text-3xl font-bold bg-linear-to-r from-[#4F39F6] to-[#9514FA] bg-clip-text text-transparent cursor-pointer">DigiTools</a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1 font-semibold">
@@ -30,9 +30,9 @@ const NavBar = () => {
                 </ul>
             </div>
             <div className="navbar-end flex gap-4">
-                <button><img src="/shopping-cart.png" alt="" /></button>
-                <button className="font-semibold">Login</button>
-                <button className="btn BTN rounded-full">Get Started</button>
+                <button className="cursor-pointer"><img src="/shopping-cart.png" alt="" /></button>
+                <button className="font-semibold cursor-pointer">Login</button>
+                <button className="btn BTN rounded-full cursor-pointer">Get Started</button>
             </div>
         </div>
     );
