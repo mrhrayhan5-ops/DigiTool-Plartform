@@ -1,4 +1,5 @@
-
+import tickMarck from '../assets/tickMarck.svg'
+import whiteCheck from '../assets/whiteCheck.png'
 
 const PricingCard = () => {
     return (
@@ -12,73 +13,76 @@ const PricingCard = () => {
 
                 {/* card container */}
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div className="max-w-6xl w-full grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
                     {/* stater plan card*/}
-                    <div className="bg-slate-50 rounded-2xl p-8 border border-gray-100 shadow-sm flex flex-col space-y-6">
+                    <div className="bg-white/60 backdrop-blur-md rounded-3xl p-8 flex flex-col justify-between shadow-sm border border-slate-200/60">
                         <div>
                             <h2 className="text-xl font-bold text-gray-900 mb-1">Stater</h2>
-                            <p className="text-gray-500 text-sm leading-relaxed">Perfect for getting started</p>
+                            <p className="text-gray-500 text-sm ">Perfect for getting started</p>
                         </div>
-                        <div>
-                            <h1 className="text-gray-500 text-sm leading-relaxed"><span className="text-3xl font-bold text-gray-900">$0</span>/Month</h1>
+                        <div class="flex items-baseline mb-8">
+                            <span class="text-4xl font-extrabold text-slate-900 tracking-tight">$0</span>
+                            <span class="text-sm font-medium text-slate-400 ml-1">/Month</span>
                         </div>
-                        <div className="text-gray-500 text-sm leading-relaxed">
-                            <p>Access to 10 free tools</p>
-                            <p>Basic templates</p>
-                            <p>Community support</p>
-                            <p>1 project per month</p>
-                        </div>
+                        <ul className="text-gray-500 space-y-3.5 mb-8 text-sm">
+                            <li className='flex items-center gap-2.5'><img src={tickMarck} alt="" />Access to 10 free tools</li>
+                            <li className='flex items-center gap-2.5'><img src={tickMarck} alt="" />Basic templates</li>
+                            <li className='flex items-center gap-2.5'><img src={tickMarck} alt="" />Community support</li>
+                            <li className='flex items-center gap-2.5'><img src={tickMarck} alt="" />1 project per month</li>
+                        </ul>
                         {/* btn */}
-                        <div className="">
-                            <button className="btn">Get Started Free</button>
-                        </div>
+
+                        <button className="w-full py-3 px-6 rounded-full font-medium text-sm bg text-white btn">Get Started Free</button>
+
                     </div>
                     {/* pro plan card */}
-                    <div className="bg-slate-50 rounded-2xl p-8 border border-gray-100 shadow-sm flex flex-col space-y-6 relative">
+                    <div className="bg rounded-2xl p-8 border border-gray-100 shadow-sm flex flex-col space-y-6 relative">
                         <div className="absolute -top-3 left-34 ">
                             <p className="bg-[#fef3c6] text-sm text-[#bb4d00] px-4 py-1 rounded-full ">Most Popular</p>
                         </div>
                         <div>
-                            <h2 className="text-xl font-bold text-gray-900 mb-1">Pro</h2>
-                            <p className="text-gray-500 text-sm leading-relaxed">Best for professionals</p>
+                            <h2 className="text-xl font-bold text-white mb-1">Pro</h2>
+                            <p className="text-white text-sm">Best for professionals</p>
                         </div>
-                        <div>
-                            <h1 className="text-gray-500 text-sm leading-relaxed"><span className="text-3xl font-bold text-gray-900">$29</span>/Month</h1>
+                        <div class="flex items-baseline mb-8">
+                            <span class="text-4xl font-extrabold tracking-tight text-white">$29</span>
+                            <span class="text-sm font-medium text-indigo-100 ml-1">/Month</span>
                         </div>
-                        <div className="text-gray-500 text-sm leading-relaxed">
-                            <p>Access to all premium tools</p>
-                            <p>Unlimited templates</p>
-                            <p>Priority support</p>
-                            <p>Unlimited projects</p>
-                            <p>Cloud sync</p>
-                            <p>Advanced analytics</p>
-                        </div>
+                        <ul className="space-y-3.5 mb-8 text-sm">
+                            <li className='flex items-center gap-2.5 text-white'><img src={whiteCheck} alt="" />Access to all premium tools</li>
+                            <li className='flex items-center gap-2.5 text-white'><img src={whiteCheck} alt="" />Unlimited templates</li>
+                            <li className='flex items-center gap-2.5 text-white'><img src={whiteCheck} alt="" />Priority support</li>
+                            <li className='flex items-center gap-2.5 text-white'><img src={whiteCheck} alt="" />Unlimited projects</li>
+                            <li className='flex items-center gap-2.5 text-white'><img src={whiteCheck} alt="" />Cloud sync</li>
+                            <li className='flex items-center gap-2.5 text-white'><img src={whiteCheck} alt="" />Advanced analytics</li>
+                        </ul>
                         {/* btn */}
-                        <div>
-                            <button>Start Pro Trial</button>
-                        </div>
+
+                        <button className='btn w-full py-3 px-6 rounded-full font-medium text-sm bg-white text-purple-700 hover:bg-slate-50 transition-colors"'>Start Pro Trial</button>
+
                     </div>
                     {/* Enterprise plam card */}
                     <div className="bg-slate-50 rounded-2xl p-8 border border-gray-100 shadow-sm flex flex-col space-y-6">
                         <div>
                             <h2 className="text-xl font-bold text-gray-900 mb-1">Enterprise</h2>
-                            <p className="text-gray-500 text-sm leading-relaxed">For teams and businesses</p>
+                            <p className="text-gray-500 text-sm ">For teams and businesses</p>
                         </div>
-                        <div>
-                            <h1 className="text-gray-500 text-sm leading-relaxed"><span className="text-3xl font-bold text-gray-900">$99</span>/Month</h1>
+                        <div class="flex items-baseline mb-8">
+                            <span class="text-4xl font-extrabold text-slate-900 tracking-tight">$99</span>
+                            <span class="text-sm font-medium text-slate-400 ml-1">/Month</span>
                         </div>
-                        <div className="text-gray-500 text-sm leading-relaxed">
-                            <p>Everything in Pro</p>
-                            <p>Team collaboration</p>
-                            <p>Custom integrations</p>
-                            <p>Dedicated support</p>
-                            <p>SLA guarantee</p>
-                            <p>Custom branding</p>
-                        </div>
+                        <ul className="space-y-3.5 mb-8 text-sm">
+                            <li className='flex items-center gap-2.5'><img src={tickMarck} alt="" />Everything in Pro</li>
+                            <li className='flex items-center gap-2.5'><img src={tickMarck} alt="" />Team collaboration</li>
+                            <li className='flex items-center gap-2.5'><img src={tickMarck} alt="" />Custom integrations</li>
+                            <li className='flex items-center gap-2.5'><img src={tickMarck} alt="" />Dedicated support</li>
+                            <li className='flex items-center gap-2.5'><img src={tickMarck} alt="" />SLA guarantee</li>
+                            <li className='flex items-center gap-2.5'><img src={tickMarck} alt="" />Custom branding</li>
+                        </ul>
                         {/* btn */}
-                        <div>
-                            <button>Contact Sales</button>
-                        </div>
+
+                        <button className='w-full py-3 px-6 rounded-full font-medium text-sm bg btn text-white hover:bg-indigo-700 transition-colors'>Contact Sales</button>
+
                     </div>
                 </div>
             </div>
