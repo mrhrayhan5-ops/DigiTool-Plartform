@@ -1,6 +1,7 @@
 
 import './App.css'
 import Banner from './component/Banner'
+import CallToAction from './component/CallToAction'
 import NavBar from './component/NavBar'
 import PricingCard from './component/PricingCard'
 import Rating from './component/Rating'
@@ -17,6 +18,7 @@ function App() {
      <Rating/>
      <StepSection/>
      <PricingCard/>
+     <CallToAction/>
     </>
   )
 }
