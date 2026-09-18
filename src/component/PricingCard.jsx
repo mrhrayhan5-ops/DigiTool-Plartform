@@ -20,9 +20,9 @@ const PricingCard = () => {
                             <h2 className="text-xl font-bold text-gray-900 mb-1">Stater</h2>
                             <p className="text-gray-500 text-sm ">Perfect for getting started</p>
                         </div>
-                        <div class="flex items-baseline mb-8">
-                            <span class="text-4xl font-extrabold text-slate-900 tracking-tight">$0</span>
-                            <span class="text-sm font-medium text-slate-400 ml-1">/Month</span>
+                        <div className="flex items-baseline mb-8">
+                            <span className="text-4xl font-extrabold text-slate-900 tracking-tight">$0</span>
+                            <span className="text-sm font-medium text-slate-400 ml-1">/Month</span>
                         </div>
                         <ul className="text-gray-500 space-y-3.5 mb-8 text-sm">
                             <li className='flex items-center gap-2.5'><img src={tickMarck} alt="" />Access to 10 free tools</li>
@@ -37,16 +37,16 @@ const PricingCard = () => {
                     </div>
                     {/* pro plan card */}
                     <div className="bg rounded-2xl p-8 border border-gray-100 shadow-sm flex flex-col space-y-6 relative">
-                        <div className="absolute -top-3 left-34 ">
-                            <p className="bg-[#fef3c6] text-sm text-[#bb4d00] px-4 py-1 rounded-full ">Most Popular</p>
+                        <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-amber-100 text-amber-800 text-xs font-semibold px-4 py-1 rounded-full shadow-sm">
+                            Most Popular
                         </div>
                         <div>
                             <h2 className="text-xl font-bold text-white mb-1">Pro</h2>
                             <p className="text-white text-sm">Best for professionals</p>
                         </div>
-                        <div class="flex items-baseline mb-8">
-                            <span class="text-4xl font-extrabold tracking-tight text-white">$29</span>
-                            <span class="text-sm font-medium text-indigo-100 ml-1">/Month</span>
+                        <div className="flex items-baseline mb-8">
+                            <span className="text-4xl font-extrabold tracking-tight text-white">$29</span>
+                            <span className="text-sm font-medium text-indigo-100 ml-1">/Month</span>
                         </div>
                         <ul className="space-y-3.5 mb-8 text-sm">
                             <li className='flex items-center gap-2.5 text-white'><img src={whiteCheck} alt="" />Access to all premium tools</li>
@@ -67,9 +67,9 @@ const PricingCard = () => {
                             <h2 className="text-xl font-bold text-gray-900 mb-1">Enterprise</h2>
                             <p className="text-gray-500 text-sm ">For teams and businesses</p>
                         </div>
-                        <div class="flex items-baseline mb-8">
-                            <span class="text-4xl font-extrabold text-slate-900 tracking-tight">$99</span>
-                            <span class="text-sm font-medium text-slate-400 ml-1">/Month</span>
+                        <div className="flex items-baseline mb-8">
+                            <span className="text-4xl font-extrabold text-slate-900 tracking-tight">$99</span>
+                            <span className="text-sm font-medium text-slate-400 ml-1">/Month</span>
                         </div>
                         <ul className="space-y-3.5 mb-8 text-sm">
                             <li className='flex items-center gap-2.5'><img src={tickMarck} alt="" />Everything in Pro</li>

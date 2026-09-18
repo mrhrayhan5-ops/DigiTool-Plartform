@@ -22,7 +22,7 @@ const StepSection = () => {
                         </div>
                         <div className="w-16 h-16 rounded-full bg-purple-50 flex items-center justify-center text-purple-600 mb-6">
                             {/* User Icon img */}
-                            <img src={userImg} alt="user" className="w-8 h-8 object-contain"/>
+                            <img src={userImg} alt="user" className="w-8 h-8 object-contain" />
                         </div>
                         <h3 className="text-xl font-bold text-gray-900 mb-3">Create Account</h3>
                         <p className="text-gray-500 text-sm leading-relaxed">
@@ -37,7 +37,7 @@ const StepSection = () => {
                         </div>
                         <div className="w-16 h-16 rounded-full bg-purple-50 flex items-center justify-center text-purple-600 mb-6">
                             {/* Package Icon  */}
-                          <img src={packageImg} alt="package" className="w-8 h-8 object-contain"/>
+                            <img src={packageImg} alt="package" className="w-8 h-8 object-contain" />
                         </div>
                         <h3 className="text-xl font-bold text-gray-900 mb-3">Choose Products</h3>
                         <p className="text-gray-500 text-sm leading-relaxed">
