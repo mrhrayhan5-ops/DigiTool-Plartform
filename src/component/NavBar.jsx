@@ -1,6 +1,6 @@
 
 
-const NavBar = () => {
+const NavBar = ({ cart = [], onCartClick }) => {
     return (
         <div className="navbar bg-base-100 shadow-sm">
             <div className="navbar-start">
@@ -30,7 +30,14 @@ const NavBar = () => {
                 </ul>
             </div>
             <div className="navbar-end flex gap-4">
-                <button className="cursor-pointer"><img src="/shopping-cart.png" alt="" /></button>
+                <button onClick={onCartClick} className="cursor-pointer relative flex items-center justify-center">
+                    <img src="/shopping-cart.png" alt="Cart" />
+                    {cart.length > 0 && (
+                        <span className="absolute -top-2 -right-2 bg-[#4F39F6] text-white text-xs font-bold w-3 h-3 rounded-full flex items-center justify-center">
+                            {cart.length}
+                        </span>
+                    )}
+                </button>
                 <button className="font-semibold cursor-pointer">Login</button>
                 <button className="btn BTN rounded-full cursor-pointer">Get Started</button>
             </div>

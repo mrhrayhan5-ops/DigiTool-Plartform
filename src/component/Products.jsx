@@ -1,27 +1,34 @@
-import { use, useState } from "react";
+
 import ProductsCard from "./ProductsCard";
 import Cart from "./Cart";
+import { use } from "react";
+import { toast } from "react-toastify";
 
 
-const Products = ({ productsPromise, cart, setCart }) => {
+const Products = ({ productsPromise, cart, setCart, activeTab, setActiveTab }) => {
     const products = use(productsPromise)
-
-    const [activeTab, setActiveTab] = useState("products")
 
 
     // add product or increase quntity
     const handleAddToCart = (product) => {
-      const isExist = cart.find((item)=> item.id === product.id);
-      if(isExist){
-        alert("Ietem already added to cart!");
-        return;
-      }
-      setCart([...cart, product]);
+        const isExist = cart.find((item) => item.id === product.id);
+        
+        toast("Iteam Added to cart!")
+        if (isExist) {
+            return;
+        }
+        setCart([...cart, product]);
     };
 
     // remove item from cart 
     const handleRemoveFromCart = (productId) => {
-       setCart(cart.filter((item)=> item.id !== productId));
+        setCart(cart.filter((item) => item.id !== productId));
+        toast("Iteam remove from cart!");
+    };
+    // Clear all items from cart
+    const handleClearCart = () => {
+        setCart([]);
+        toast("Thank you for your purchase! Your order has been placed.");
     };
 
     return (
@@ -37,9 +44,12 @@ const Products = ({ productsPromise, cart, setCart }) => {
                 <div className="flex justify-center gap-5 mb-10">
 
                     <div className="tabs tabs-box justify-center gap-5 mb-10 bg-transparent">
-                        <input type="radio" name="my_tabs_1" className="tab rounded-full px-8" aria-label="Products" defaultChecked onClick={() => setActiveTab("products")} />
+                        <input type="radio" name="my_tabs_1" className="tab rounded-full px-8" aria-label="Products" defaultChecked checked={activeTab === "products"}
+                            onChange={() => setActiveTab("products")} />
 
-                        <input type="radio" name="my_tabs_1" className="tab rounded-full px-8" aria-label= {`Cart (${cart.length})`}onClick={() => setActiveTab("cart")} />
+                        <input type="radio" name="my_tabs_1" className="tab rounded-full px-8" aria-label={`Cart (${cart.length})`}
+                            checked={activeTab === "cart"}
+                            onChange={() => setActiveTab("cart")} />
 
                     </div>
                 </div>
@@ -55,7 +65,8 @@ const Products = ({ productsPromise, cart, setCart }) => {
                 )}
                 {/* cart */}
                 {activeTab === "cart" && (
-                    <Cart cart={cart} handleRemoveFromCart={handleRemoveFromCart} />
+                    <Cart cart={cart} handleRemoveFromCart={handleRemoveFromCart}
+                        handleClearCart={handleClearCart} />
                 )}
             </div>
         </div>

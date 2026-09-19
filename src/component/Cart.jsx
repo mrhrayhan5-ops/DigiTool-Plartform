@@ -1,4 +1,4 @@
-const Cart = ({ cart = [], handleRemoveFromCart }) => {
+const Cart = ({ cart = [], handleRemoveFromCart, handleClearCart }) => {
     // Calculate total price directly without quantities
     const totalCost = cart.reduce((sum, item) => sum + Number(item.price || 0), 0);
 
@@ -54,6 +54,7 @@ const Cart = ({ cart = [], handleRemoveFromCart }) => {
                         {/* Non-functional Checkout Button */}
                         <button
                             type="button"
+                            onClick={handleClearCart}
                             className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-3.5 rounded-2xl transition duration-200 text-sm sm:text-base shadow-sm"
                         >
                             Proceed To Checkout
