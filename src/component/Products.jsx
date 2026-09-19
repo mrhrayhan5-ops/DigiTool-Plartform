@@ -13,17 +13,19 @@ const Products = ({ productsPromise, cart, setCart, activeTab, setActiveTab }) =
     const handleAddToCart = (product) => {
         const isExist = cart.find((item) => item.id === product.id);
         
-        toast("Iteam Added to cart!")
+        
         if (isExist) {
+            toast.error("Iteam alredy pound!")
             return;
         }
         setCart([...cart, product]);
+        toast.success("Iteam Added to cart!")
     };
 
     // remove item from cart 
     const handleRemoveFromCart = (productId) => {
         setCart(cart.filter((item) => item.id !== productId));
-        toast("Iteam remove from cart!");
+        toast.error("Iteam remove from cart!");
     };
     // Clear all items from cart
     const handleClearCart = () => {
